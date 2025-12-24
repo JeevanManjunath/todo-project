@@ -129,7 +129,7 @@ function createAndAppend(todo) {
     labelElement.textContent = todo.text;
     labelElement.id = labelId;
     if (todo.isChecked === true) {
-        labelElement.classList.add("checked");
+        labelElement.classList.add("strike-text");
     }
     labelcontainer.appendChild(labelElement);
 
