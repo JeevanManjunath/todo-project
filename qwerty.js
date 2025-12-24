@@ -61,12 +61,12 @@ addTodobutton.onclick = function() {
 function onToDoStatuschange(checkboxId, labelId, todoId) {
     let checkboxElement = document.getElementById(checkboxId);
     let labelElement = document.getElementById(labelId);
-    /*if (checkboxElement.checked === true) {
+    if (checkboxElement.checked === true) {
          labelElement.classList.add("strike-text");
      } else {
          labelElement.classList.remove("strike-text");
-     }*/
-    labelElement.classList.toggle("strike-text");
+     }
+    //labelElement.classList.toggle("strike-text");
 
     let todoobjectIndex = todoList.findIndex(function(eachtodo) {
         let eachtodoId = "todo" + eachtodo.uniqueNo;
@@ -130,9 +130,6 @@ function createAndAppend(todo) {
     labelElement.id = labelId;
     if (todo.isChecked === true) {
         labelElement.classList.add("strike-text");
-    }
-    else(todo.isChecked === false){
-         labelElement.classList.remove("strike-text");
     }
     labelcontainer.appendChild(labelElement);
 
