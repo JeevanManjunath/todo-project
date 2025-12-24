@@ -131,6 +131,9 @@ function createAndAppend(todo) {
     if (todo.isChecked === true) {
         labelElement.classList.add("strike-text");
     }
+    else(todo.isChecked === false){
+         labelElement.classList.remove("strike-text");
+    }
     labelcontainer.appendChild(labelElement);
 
     let deleteIconconatiner = document.createElement("div");
